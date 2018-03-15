@@ -12,7 +12,6 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-
   server:
     image: glyptodon/guacd
     restart: always
@@ -21,7 +20,7 @@ services:
     image: glyptodon/guacamole
     restart: always
     ports:
-      - 8080:8080
+      - 8585:8080
     links:
       - server
       - db
@@ -32,6 +31,7 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-
+      GUACD_HOSTNAME: server
+      GUACD_PORT: 4822
 volumes:
   data:
