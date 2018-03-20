@@ -5,7 +5,7 @@
 FROM mysql
 
 # Update these to stay in line with the official guacamole containers.
-ARG GUAC_REPO=guacamole/guacamole
+ARG GUAC_REPO=apache/guacamole-client
 ARG GUAC_VERSION=guacamole/0.9.14
 
 # Fetch the needed schema files from the guacamole repo and place them where the
