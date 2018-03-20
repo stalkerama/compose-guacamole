@@ -17,7 +17,7 @@ docker-compose up -d
 ```
 
 Give it a few seconds to initialize and then you can access guacamole
-at `http://docker-host:8080/guacamole/`. The default username and password are
+at `http://127.0.0.1:8585/guacamole/`. The default username and password are
 both `guacadmin`.
 
 You may want to open the `.env` file and change the example database passwords
